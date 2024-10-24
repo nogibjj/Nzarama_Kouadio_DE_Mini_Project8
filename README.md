@@ -15,6 +15,14 @@ The CLI supports the following operations:
 
 The project uses JSON to store table data, allowing persistence between runs. Data is saved in the db.json file.
 
+# Binary Artifact
+
+A pre-built binary executable is provided via the GitHub Actions CI/CD workflow. It can be downloaded directly from the GitHub Actions artifacts.
+
+- Go to the GitHub Actions tab of this repository.
+- Select the latest workflow run.
+- Download the `release-binary` artifact.
+
 # Set Up Instructions
 
 You can interact with the project either by running it directly from source code using cargo or by using the provided binary executable. Follow the instructions below for each method.
@@ -33,7 +41,7 @@ You can interact with the project either by running it directly from source code
 
 - To build the binary, navigate to the project root and run `cargo build --release`
 
-- Navigate to target/release
+- Navigate to target/release: `cd target/release`
 
 - Run the binary: `./sqlite <command> <options>`
 
@@ -49,7 +57,7 @@ You can interact with the project either by running it directly from source code
 
 The CLI tool uses a simple JSON file (db.json) to store all table data. Each table consists of a set of columns and rows. The database is saved after each operation to ensure persistence between program executions.
 
-# Command and Usage in Source Code
+# Run Commands via Source Code
 
 > Create Table
 
@@ -67,20 +75,11 @@ The CLI tool uses a simple JSON file (db.json) to store all table data. Each tab
 
 `cargo run -- delete <table_name>`
 
-> Example: This creates a table called users with columns id, name, and age. This inserts a row into the users table with the values 1, "Alice", and 30. This displays all rows of the users table. This will delete the users table from the database
+> Example: We create a table called users with columns id, name, and age. Then, insert a row into the users table with the values 1, "Alice", and 30. Then, we displays all rows of the users table. Finally, we delete the table. 
 
 ![alt text](sqlite/Images/SourceCode.png)
 
-cargo run -- create users id name age
-
-cargo run -- insert users 1 "Alice" 30
-
-cargo run -- query users
-
-cargo run -- delete users
-
-
-# Command and Usage in Binary
+# Run Commands via the Binary
 
 > Create Table
 
@@ -100,7 +99,7 @@ cargo run -- delete users
 
 > Example: Reproducing the same example as before
 
-
+![alt text](sqlite/Images/Binary.png)
 
 
 
