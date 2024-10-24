@@ -1,3 +1,6 @@
+Download the latest binary built via CI/CD. The binary is generated and stored after every successful run of the pipeline.
+[![CI](https://github.com/nogibjj/Nzarama_Kouadio_DE_Mini_Project7/actions/workflows/CI.yml/badge.svg)](https://github.com/nogibjj/Nzarama_Kouadio_DE_Mini_Project7/actions/workflows/CI.yml)
+
 ## Mini Project 7: Rust CLI Project: Database Operations with Simple CRUD
 
 This project demonstrates how to perform basic CRUD (Create, Read, Update, Delete) operations using a Command Line Interface (CLI) built with Rust. The CLI simulates database-like operations, which allows to create tables, insert data, query the contents, and delete tables.
