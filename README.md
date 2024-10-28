@@ -2,8 +2,6 @@ Rust CICD: [![Rust_CICD](https://github.com/nogibjj/Nzarama_Kouadio_DE_Mini_Proj
 
 Python CICD: [![Python_CICD](https://github.com/nogibjj/Nzarama_Kouadio_DE_Mini_Project8_test1/actions/workflows/python.yml/badge.svg)](https://github.com/nogibjj/Nzarama_Kouadio_DE_Mini_Project8_test1/actions/workflows/python.yml)
 
-Python CICD: 
-
 ## Mini Project 8: Python vs. Rust Performance Comparison for Data Processing
 
 This project demonstrates how to perform a data-processing task using both Python and Rust. The goal is to highlight performance differences between Python and Rust, focusing on speed and resource usage improvements when rewriting an existing Python script in Rust.
