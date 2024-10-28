@@ -8,7 +8,7 @@ use sysinfo::{ProcessExt, System, SystemExt}; // Import sysinfo for resource tra
 
 fn main() -> Result<(), Box<dyn Error>> {
     // Initialize system for memory usage
-    let system = System::new_all(); // No need to declare as mutable if we only get initial data
+    let system = System::new_all();
     let process = system.process(sysinfo::get_current_pid().unwrap()).unwrap();
     let start_memory: u64 = process.memory(); // Memory usage in KB
 
@@ -36,11 +36,6 @@ fn main() -> Result<(), Box<dyn Error>> {
     // End time measurement and memory usage
     let duration = start_time.elapsed();
     let end_memory: u64 = process.memory(); // Memory usage in KB
-
-    // Print results to console
-    println!("Total Count of People by Surname: {}", total_count);
-    println!("Rust Execution Time: {:.6} seconds", duration.as_secs_f64());
-    println!("Rust Memory Usage: {} KB", end_memory - start_memory);
 
     // Save results to a markdown file with a specific name
     let mut file = File::create("rust_output.md")?;
