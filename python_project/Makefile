@@ -2,7 +2,7 @@ install:
 		pip install -r requirements.txt
 
 lint:
-		flake8 --max-line-length=200 .
+		flake8 --max-line-length=200 python_project
 
 
 test:
