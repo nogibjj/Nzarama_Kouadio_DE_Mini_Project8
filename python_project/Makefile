@@ -2,7 +2,7 @@ install:
 		pip install -r requirements.txt
 
 lint:
-		fl8 --max-line-length=200 .
+		flake8 --max-line-length=200 .
 
 
 test:
