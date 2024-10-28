@@ -1,5 +1,5 @@
 use csv::ReaderBuilder;
-use reqwest;
+use reqwest::blocking::get;
 use std::error::Error;
 use std::fs::File;
 use std::io::Write;
@@ -17,7 +17,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     // Set up the CSV reader to read from the URL
     let url: &str = "https://github.com/fivethirtyeight/data/raw/refs/heads/master/most-common-name/surnames.csv";
-    let response_text = reqwest::blocking::get(url)?.text()?;
+    let response_text = get(url)?.text()?;
     let mut rdr = ReaderBuilder::new()
         .flexible(true)
         .from_reader(response_text.as_bytes());
@@ -46,3 +46,4 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     Ok(())
 }
+
