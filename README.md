@@ -1,5 +1,7 @@
 Rust CICD: [![Rust_CICD](https://github.com/nogibjj/Nzarama_Kouadio_DE_Mini_Project8_test1/actions/workflows/rust.yml/badge.svg)](https://github.com/nogibjj/Nzarama_Kouadio_DE_Mini_Project8_test1/actions/workflows/rust.yml)
 
+Python CICD: [![Python_CICD](https://github.com/nogibjj/Nzarama_Kouadio_DE_Mini_Project8_test1/actions/workflows/python.yml/badge.svg)](https://github.com/nogibjj/Nzarama_Kouadio_DE_Mini_Project8_test1/actions/workflows/python.yml)
+
 Python CICD: 
 
 ## Mini Project 8: Python vs. Rust Performance Comparison for Data Processing
