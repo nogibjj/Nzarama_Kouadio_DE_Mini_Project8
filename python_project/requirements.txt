@@ -1,0 +1,13 @@
+# Linter
+pylint
+
+# Formatter
+black
+
+# Testing framework
+pytest
+
+# Additional 
+numpy
+pandas
+psutil

@@ -1,108 +1,66 @@
-Download the latest binary built via CI/CD. The binary is generated and stored after every successful run of the pipeline.
-[![CI](https://github.com/nogibjj/Nzarama_Kouadio_DE_Mini_Project7/actions/workflows/CI.yml/badge.svg)](https://github.com/nogibjj/Nzarama_Kouadio_DE_Mini_Project7/actions/workflows/CI.yml)
 
-## Mini Project 7: Rust CLI Project: Database Operations with Simple CRUD
 
-This project demonstrates how to perform basic CRUD (Create, Read, Update, Delete) operations using a Command Line Interface (CLI) built with Rust. The CLI simulates database-like operations, which allows to create tables, insert data, query the contents, and delete tables.
+## Mini Project 8: Python vs. Rust Performance Comparison for Data Processing
+
+This project demonstrates how to perform a data-processing task using both Python and Rust. The goal is to highlight performance differences between Python and Rust, focusing on speed and resource usage improvements when rewriting an existing Python script in Rust.
 
 # Project Overview
-The CLI supports the following operations:
+This project implements a simple data-processing task that calculates the total count of people by surname from a CSV dataset. The task is performed in both Python and Rust, with the following objectives:
 
-- **Create**: Create a table with specified columns.
+- **Functionality**: Ensure both scripts deliver the same results.
 
-- **Insert**: Insert rows of data into a specified table.
+- **Performance**: Highlight improvements in speed and resource efficiency of the Rust implementation compared to Python.
 
-- **Query**: Display the contents of a table.
-
-- **Delete**: Remove a table from the database.
-
-The project uses JSON to store table data, allowing persistence between runs. Data is saved in the db.json file.
-
-# Binary Artifact
-
-A pre-built binary executable is provided via the GitHub Actions CI/CD workflow. It can be downloaded directly from the GitHub Actions artifacts.
-
-- Go to the GitHub Actions tab of this repository.
-- Select the latest workflow run.
-- Download the `release-binary` artifact.
 
 # Set Up Instructions
 
-You can interact with the project either by running it directly from source code using cargo or by using the provided binary executable. Follow the instructions below for each method.
+You can run the project from source code using either the Python or Rust implementations, or by using the pre-built Rust binary executable. Follow the instructions below for each method.
 
-> 1. Running from Source
+> 1. Running the Python Script
 
-- Install Rust on your machine
+- Install dependencies: `pip3 install -r requirements.txt`
 
-- Clone the repository: git clone https://github.com/nogibjj/Nzarama_Kouadio_DE_Mini_Project7.git
+- Run the python script: `python main_python.py`
 
-- Navigate to the project directory: cd sqlite
+> 2. Running the Rust Script
 
-- Run the following to build and run the project: `cargo build` and `cargo run -- <command>`
+- Run the scrip: `cargo build --release`
 
-> 2. Using the Binary Executable
 
-- To build the binary, navigate to the project root and run `cargo build --release`
+# Test Set Up
 
-- Navigate to target/release: `cd target/release`
+- **Dataset**: [Most Common Surnames CSV Dataset](https://github.com/fivethirtyeight/data/raw/refs/heads/master/most-common-name/surnames.csv)
 
-- Run the binary: `./sqlite <command> <options>`
+- **Task**: Calculate the total count of people by surname.
+
+- **Environment**: GitHub Codespaces, Ubuntu 20.04
+
+- **Python Version**: 3.11.2
+
+- **Rust Version**: 1.66.0
+
 
 # Important File Elements
 
-- `main.rs`: The main Rust file containing the CLI logic and CRUD operations.
+- `main_python.py`: Python script that processes the CSV data.
 
-- `db.json`: The file where table data is stored.
+- `main.rs`: Rust script that performs the same data-processing task.
 
-- `Cargo.toml`: Rust package file with dependencies.
+- `requirements.txt`: Python dependencies for running the Python script.
 
-# Explanation of JSON Database
+- `Cargo.toml`: Rust dependencies for running the Rust project.
 
-The CLI tool uses a simple JSON file (db.json) to store all table data. Each table consists of a set of columns and rows. The database is saved after each operation to ensure persistence between program executions.
 
-# Run Commands via Source Code
+# Time Comparison
 
-> Create Table
+For detailed results, see [Rust Analysis Results](rust_output.md) or [Python Analysis Results](python_output.md).
 
-`cargo run -- create <tablename> <column1> <column2> ...`
+# Conclusion
 
-> Insert Data into Table
+> The Rust version of the script demonstrated significant improvements in execution time due to Rust’s memory safety and system-level performance optimizations. 
 
-`cargo run -- insert <table_name> <value1> <value2> ... <valueN>` 
+> Python, while versatile and easy to write, had slightly higher memory usage and was slower due to its interpreted nature.
 
-> Query Table
-
-` cargo run -- query <table_name> `
-
-> Delete Table
-
-`cargo run -- delete <table_name>`
-
-> Example: We create a table called users with columns id, name, and age. Then, insert a row into the users table with the values 1, "Alice", and 30. Then, we displays all rows of the users table. Finally, we delete the table. 
-
-![alt text](sqlite/Images/SourceCode.png)
-
-# Run Commands via the Binary
-
-> Create Table
-
-`./sqlite create <tablename> <column1> <column2> ...`
-
-> Insert Data into Table
-
-`./sqlite insert <tablename> <value1> <value2> ...`
-
-> Query Table
-
-`./sqlite query <tablename>`
-
-> Delete Table
-
-`./sqlite delete <tablename>`
-
-> Example: Reproducing the same example as before
-
-![alt text](sqlite/Images/Binary.png)
 
 
 

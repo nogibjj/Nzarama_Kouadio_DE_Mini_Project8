@@ -1,0 +1,39 @@
+name: Python_CICD
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.12
+
+      - name: Install dependencies
+        run: make install
+        working-directory: python_project
+
+      - name: Lint
+        run: make lint
+        working-directory: python_project
+
+      - name: Test
+        run: make test
+        working-directory: python_project
+
+      - name: Format
+        run: make format
+        working-directory: python_project
+
+      - name: Deploy
+        run: make deploy
+        working-directory: python_project
