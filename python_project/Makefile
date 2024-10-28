@@ -1,14 +1,14 @@
 install:
-	pip install -r requirements.txt
+		pip install -r requirements.txt
 
 lint:
-    flake8 .
+		flake8 .
 
 test:
-    pytest
+		pytest
 
 format:
-    black .
+		black .
 
 deploy:
-    echo "Deploy step to be added here"
+		echo "Deploy step to be added here"

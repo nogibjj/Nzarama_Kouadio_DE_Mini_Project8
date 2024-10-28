@@ -1,4 +1,6 @@
+Rust CICD: [![Rust_CICD](https://github.com/nogibjj/Nzarama_Kouadio_DE_Mini_Project8_test1/actions/workflows/rust.yml/badge.svg)](https://github.com/nogibjj/Nzarama_Kouadio_DE_Mini_Project8_test1/actions/workflows/rust.yml)
 
+Python CICD: 
 
 ## Mini Project 8: Python vs. Rust Performance Comparison for Data Processing
 
@@ -53,7 +55,7 @@ You can run the project from source code using either the Python or Rust impleme
 
 # Time Comparison
 
-For detailed results, see [Rust Analysis Results](rust_output.md) or [Python Analysis Results](python_output.md).
+For detailed results, see [Rust Analysis Results](rust_project/rust_output.md) or [Python Analysis Results](python_project/python_output.md).
 
 # Conclusion
 
