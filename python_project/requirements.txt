@@ -8,6 +8,6 @@ black
 pytest
 
 # Additional 
-numpy
 pandas
 psutil
+flake8
